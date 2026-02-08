@@ -3,64 +3,77 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VIYAF / Pack</title>
-  <meta name="description" content="VIYAF Pack · 资料包入口（占位页）" />
+  <title>VIYAF Pack｜资料包</title>
+  <meta name="description" content="VIYAF 资料包 Pack｜下载与资料索取入口（临时页）。" />
   <style>
+    :root{--black:#000;--bg:#fff;--gold:#b08d57;--border:#111}
+    *{box-sizing:border-box}
     body{
-      margin:0;
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;
-      background:#fff; color:#111;
+      margin:0;background:var(--bg);color:var(--black);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
+      line-height:1.55;
     }
-    .wrap{ max-width: 880px; margin: 0 auto; padding: 40px 20px 44px; }
-    a{ color:#111; text-decoration:none; border-bottom:1px solid #ddd; }
-    h1{ margin:10px 0 10px; font-size:24px; line-height:1.25; }
-    .meta{ font-size:13px; color:#666; line-height:1.7; }
-    .card{
-      margin-top:16px;
-      border:1px solid #ededed; border-radius:16px; padding:18px;
-      box-shadow: 0 1px 0 rgba(0,0,0,.03);
-    }
-    ul{ margin:10px 0 0; padding-left:18px; }
-    li{ margin:8px 0; line-height:1.6; color:#222; }
-    .btns{ display:flex; gap:10px; flex-wrap:wrap; margin-top:14px; }
+    .wrap{max-width:960px;margin:0 auto;padding:28px 18px 40px}
+    .bar{border:1px solid var(--border);padding:14px 16px;display:flex;gap:12px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+    .bar h1{margin:0;font-size:18px}
+    .bar .sub{margin:6px 0 0 0;font-size:13px}
     .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 16px; border-radius:12px;
-      border:1px solid #111; background:#111; color:#fff; font-weight:700; font-size:14px;
-      text-decoration:none;
+      display:inline-block;border:1px solid var(--border);padding:9px 12px;text-decoration:none;background:#fff;font-size:13px
     }
-    .btn.secondary{ background:#fff; color:#111; }
-    footer{ margin-top:20px; font-size:12px; color:#666; line-height:1.6; }
+    .btn:hover{outline:2px solid var(--gold);outline-offset:2px}
+    .card{border:1px solid var(--border);padding:16px;margin-top:14px}
+    .card h2{margin:0 0 10px 0;font-size:16px}
+    .list{margin:0;padding-left:18px}
+    .list li{margin:6px 0}
+    .muted{font-size:12px}
+    .kv{margin:0;padding:0;list-style:none}
+    .kv li{padding:8px 0;border-top:1px solid var(--border);font-size:14px}
+    .kv li:first-child{border-top:none}
+    footer{margin-top:14px;border:1px solid var(--border);padding:12px 16px;font-size:12px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
   </style>
 </head>
 <body>
   <div class="wrap">
-    <!-- 关键：返回上一级（仓库根目录），必须用 ../ -->
-    <div class="meta"><a href="../">← 返回首页</a></div>
-
-    <h1>打开资料包 / Pack</h1>
-    <div class="meta">说明：这是一个极简占位页。后续你可以把“资料包PDF/下载文件/补充材料”放在这里，或替换为更完整的内容。</div>
-
-    <div class="card">
-      <strong>建议你后续放入的内容（可选）</strong>
-      <ul>
-        <li>《VIYAF 募资宣传册》长版 PDF（或附件版）</li>
-        <li>Donor Benefits Matrix（当期版）</li>
-        <li>Impact Agreement / 合规说明（摘要）</li>
-        <li>项目案例与影像资料（链接或文件）</li>
-      </ul>
-
-      <div class="btns">
-        <!-- 关键：跨目录跳转用 ../verify/ -->
-        <a class="btn" href="../verify/">去机构核验页 / Verify →</a>
-        <a class="btn secondary" href="../">返回首页</a>
+    <div class="bar">
+      <div>
+        <h1>打开资料包 / Pack</h1>
+        <p class="sub">VIYAF — Vienna International Youth Arts Development Foundation（临时落地页）</p>
+      </div>
+      <div class="actions">
+        <a class="btn" href="../">返回首页</a>
+        <a class="btn" href="../verify/">机构核验 / Verify</a>
       </div>
     </div>
 
+    <div class="card">
+      <h2>资料包内容（当前口径）</h2>
+      <ul class="list">
+        <li>《VIYAF 募资宣传册》v01/26（中英混排）</li>
+        <li>项目与交付体系摘要（舞台/档案/影像/出版/导师评估等，按项目类型）</li>
+        <li>捐赠与合作框架摘要（门槛与权益以当期签署文件为准）</li>
+        <li>合规提示：本资料不构成投资或证券要约</li>
+      </ul>
+      <p class="muted" style="margin:10px 0 0 0;">
+        注：如需下载 PDF 文件，可将 PDF 上传到本仓库（例如 <code>/assets/</code> 目录）后把下载链接补到本页。
+        在你们 PDF 还未上线前，本页也可作为“索取入口”使用。
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>获取资料包（建议方式）</h2>
+      <p style="margin:0 0 10px 0;">
+        如需获取最新版资料包（PDF / 电子版），请直接邮件联系我们，我们会在 1 个工作日内回复并提供下载或发送版本。
+      </p>
+      <ul class="kv">
+        <li><strong>Email</strong>：<a href="mailto:office@viyaf.org">office@viyaf.org</a></li>
+        <li><strong>Tel</strong>：+43 699 1921 0336</li>
+      </ul>
+    </div>
+
     <footer>
-      Kontakt: <a href="mailto:office@viyaf.org">office@viyaf.org</a> · <a href="tel:+4369919210336">+43 699 1921 0336</a><br/>
-      Hinweis: 本页面为“临时微站/资料落地页”，用于对外沟通与资料承接；不构成任何投资或证券要约。<br/>
-      © 2025–2026 Wiener Internationale Jugendkunstentwicklung Privatstiftung. All rights reserved.
+      <div><strong>Hinweis</strong>：本页为资料承接入口，不构成任何投资或证券要约。</div>
+      <div style="margin-top:8px;">© 2025–2026 Wiener Internationale Jugendkunstentwicklung Privatstiftung. All rights reserved.</div>
     </footer>
   </div>
 </body>
