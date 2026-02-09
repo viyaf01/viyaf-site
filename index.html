@@ -1,200 +1,82 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIYAF — Vienna International Youth Arts Development Foundation</title>
-  <meta name="description" content="VIYAF 临时微站｜Coming soon。打开资料包 / Pack；机构核验 / Verify。" />
-  <meta name="robots" content="index,follow" />
+  <meta name="description" content="VIYAF — Vienna International Youth Arts Development Foundation | Official micro-site · Coming soon" />
   <style>
     :root{
-      --black:#000000;
-      --bg:#ffffff;
-      --gold:#b08d57;
-      --border:#111111;
+      --text:#111;
+      --muted:#666;
+      --line:#eaeaea;
+      --bg:#fff;
     }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--black);
-      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
-      line-height:1.55;
+    html,body{
+      margin:0; padding:0;
+      background:var(--bg); color:var(--text);
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
+      line-height:1.65;
     }
-    a{color:inherit}
-    .wrap{
-      max-width:960px;
-      margin:0 auto;
-      padding:28px 18px 40px;
+    .wrap{ max-width: 880px; margin:0 auto; padding: 42px 20px 56px; }
+    .top{ display:flex; align-items:center; gap:14px; margin-bottom:16px; }
+    .logo{ height:46px; width:auto; display:block; }
+    h1{ font-size:22px; margin:0; letter-spacing:.2px; }
+    .sub{ color:var(--muted); margin-top:6px; font-size:14px; }
+    .tagline{ margin-top:14px; font-size:16px; }
+    .cnnote{ margin-top:6px; color:var(--muted); font-size:14px; }
+    .card{ border:1px solid var(--line); border-radius:14px; padding:18px; margin-top:18px; }
+    .btns{ display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
+    a.btn{
+      display:inline-block; padding:12px 16px; border-radius:10px;
+      text-decoration:none; border:1px solid var(--text); color:var(--text); font-weight:600;
     }
-    .topline{
-      display:flex;
-      align-items:flex-start;
-      justify-content:space-between;
-      gap:16px;
-      border:1px solid var(--border);
-      padding:16px 16px;
-    }
-    .brand h1{
-      margin:0 0 8px 0;
-      font-size:20px;
-      letter-spacing:.2px;
-    }
-    .brand .sub{
-      margin:0;
-      font-size:14px;
-    }
-    .pill{
-      display:inline-block;
-      border:1px solid var(--border);
-      padding:6px 10px;
-      font-size:12px;
-      white-space:nowrap;
-    }
-    .hero{
-      margin-top:18px;
-      border:1px solid var(--border);
-      padding:18px 16px;
-    }
-    .hero .en{
-      margin:0 0 6px 0;
-      font-size:14px;
-    }
-    .hero .cn{
-      margin:0 0 10px 0;
-      font-size:14px;
-    }
-    .hero .note{
-      margin:0;
-      font-size:12px;
-    }
-    .grid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:14px;
-      margin-top:14px;
-    }
-    @media (max-width:820px){
-      .grid{grid-template-columns:1fr}
-    }
-    .card{
-      border:1px solid var(--border);
-      padding:16px 16px;
-    }
-    .card h2{
-      margin:0 0 10px 0;
-      font-size:16px;
-    }
-    .card p, .card li{font-size:14px}
-    .card ul{
-      margin:10px 0 0 18px;
-      padding:0;
-    }
-    .actions{
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:12px;
-    }
-    .btn{
-      display:inline-block;
-      border:1px solid var(--border);
-      padding:10px 14px;
-      text-decoration:none;
-      font-size:14px;
-      background:#fff;
-    }
-    .btn.primary{
-      border-color:var(--black);
-      box-shadow: inset 0 0 0 1px var(--black);
-    }
-    .btn.primary:hover{
-      box-shadow: inset 0 0 0 2px var(--black);
-    }
-    .btn:hover{
-      outline:2px solid var(--gold);
-      outline-offset:2px;
-    }
-    .kv{
-      margin:0;
-      padding:0;
-      list-style:none;
-    }
-    .kv li{
-      padding:8px 0;
-      border-top:1px solid var(--border);
-      font-size:14px;
-    }
-    .kv li:first-child{border-top:none}
-    .muted{font-size:12px}
-    footer{
-      margin-top:14px;
-      border:1px solid var(--border);
-      padding:12px 16px;
-      font-size:12px;
-    }
+    a.btn.primary{ background:var(--text); color:#fff; }
+    .meta{ margin-top:22px; padding-top:16px; border-top:1px solid var(--line); font-size:14px; color:var(--muted); }
+    .meta b{ color:var(--text); }
+    footer{ margin-top:18px; font-size:12px; color:var(--muted); }
+    .kv div{ margin:6px 0; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="topline">
-      <div class="brand">
+  <main class="wrap">
+    <div class="top">
+      <img class="logo" src="assets/logo.png" alt="VIYAF logo" />
+      <div>
         <h1>VIYAF — Vienna International Youth Arts Development Foundation</h1>
-        <p class="sub">Wiener Internationale Jugendkunstentwicklung Privatstiftung (Austria)</p>
-      </div>
-      <div class="pill">Official micro-site · Coming soon</div>
-    </div>
-
-    <div class="hero">
-      <p class="en"><strong>Slogan</strong>｜Where music meets the world, tomorrow’s virtuosi rise.</p>
-      <p class="cn"><strong>中文主张</strong>｜在世界音乐之都，孕育全球新生代艺术领袖。</p>
-      <p class="note muted">官网（www.viyaf.org）预计 2026 Q2 上线。本页为对外沟通与资料承接的临时落地页。</p>
-
-      <div class="actions" role="navigation" aria-label="Primary actions">
-        <!-- 关键：用相对路径，避免 GitHub Pages 404 -->
-        <a class="btn primary" href="./pack/">打开资料包 / Pack</a>
-        <a class="btn" href="./verify/">机构核验 / Verify</a>
+        <div class="sub">Official micro-site · Coming soon</div>
       </div>
     </div>
 
-    <div class="grid">
-      <div class="card">
-        <h2>60 秒了解 VIYAF</h2>
-        <p style="margin:0 0 10px 0;">
-          VIYAF 立足维也纳，以国际化舞台与专业培养体系支持青年艺术人才走向世界；并以透明、审慎的治理与合规流程，
-          确保每一份支持可追溯、可验证、可持续。
-        </p>
-        <ul>
-          <li><strong>一线舞台与国际连接</strong>：维也纳及欧洲一线演出与交流平台（以当期排期与项目方案为准）。</li>
-          <li><strong>可验证成果交付</strong>：证书/档案/节目单/影像/出版或发行编号/导师评估（以项目类型为准）。</li>
-          <li><strong>透明机制</strong>：收据、合同、归档与定期报告（以当期制度执行）。</li>
-        </ul>
-        <p class="muted" style="margin:10px 0 0 0;">
-          Hinweis｜鸣谢方式可公开或匿名，尊重捐赠人偏好与隐私需求。
-        </p>
+    <div class="tagline"><b>Where music meets the world, tomorrow’s virtuosi rise.</b></div>
+    <div class="cnnote">维也纳国际青年艺术发展基金会（奥地利私营基金会）｜官网预计 2026 Q2 上线</div>
+
+    <section class="card">
+      <h2 style="margin:0 0 10px; font-size:16px;">60 秒了解 VIYAF</h2>
+      <div>
+        VIYAF 立足维也纳，以国际化舞台与专业培养体系支持青年艺术人才走向世界；并以透明、审慎的治理与合规流程，确保每一份支持可追溯、可验证、可持续。
       </div>
 
-      <div class="card">
-        <h2>Kontakt</h2>
-        <ul class="kv">
-          <li><strong>Email</strong>：<a href="mailto:office@viyaf.org">office@viyaf.org</a></li>
-          <li><strong>Tel</strong>：+43 699 1921 0336</li>
-          <li><strong>Adresse</strong>：Schweidlgasse 30/2/56, 1020 Wien, Austria</li>
-          <li><strong>Firmenbuch</strong>：FN 653499 d</li>
-          <li><strong>Domain</strong>：www.viyaf.org（已注册；官网预计 2026 Q2 上线）</li>
-        </ul>
+      <div class="btns">
+        <a class="btn primary" href="pack/">打开资料包 / Pack</a>
+        <a class="btn" href="verify/">机构核验 / Verify</a>
       </div>
-    </div>
+    </section>
+
+    <section class="meta">
+      <div><b>Kontakt</b></div>
+      <div class="kv">
+        <div>Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a></div>
+        <div>Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a></div>
+        <div>Address: Schweidlgasse 30/2/56, 1020 Wien</div>
+        <div>Domain: <a href="https://www.viyaf.org/">www.viyaf.org</a></div>
+      </div>
+    </section>
 
     <footer>
-      <div>
-        <strong>Hinweis</strong>：本页面为“临时微站/资料落地页”，用于对外沟通与资料承接；
-        不构成任何投资或证券要约。教育升学由各院校独立决定。
-      </div>
-      <div style="margin-top:8px;">
-        © 2025–2026 Wiener Internationale Jugendkunstentwicklung Privatstiftung. All rights reserved.
-      </div>
+      Hinweis: 本页面为“临时微站/资料落地页”，用于对外沟通与资料承接；不构成任何投资或证券要约。<br />
+      © 2025–2026 Wiener Internationale Jugendkunstentwicklung Privatstiftung. All rights reserved.
     </footer>
-  </div>
+  </main>
 </body>
 </html>
