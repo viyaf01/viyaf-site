@@ -1,83 +1,71 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-Hans">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>VIYAF Verify｜机构核验</title>
-  <meta name="description" content="VIYAF 机构核验 Verify｜奥地利 Firmenbuch 关键信息摘要（临时页）。" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VIYAF Verify — Vienna International Youth Arts Development Foundation</title>
+  <meta name="description" content="VIYAF Verify · Registration & governance quick check" />
   <style>
-    :root{--black:#000;--bg:#fff;--gold:#b08d57;--border:#111}
-    *{box-sizing:border-box}
-    body{
-      margin:0;background:var(--bg);color:var(--black);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
-      line-height:1.55;
-    }
-    .wrap{max-width:960px;margin:0 auto;padding:28px 18px 40px}
-    .bar{border:1px solid var(--border);padding:14px 16px;display:flex;gap:12px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
-    .bar h1{margin:0;font-size:18px}
-    .bar .sub{margin:6px 0 0 0;font-size:13px}
-    .btn{
-      display:inline-block;border:1px solid var(--border);padding:9px 12px;text-decoration:none;background:#fff;font-size:13px
-    }
-    .btn:hover{outline:2px solid var(--gold);outline-offset:2px}
-    .card{border:1px solid var(--border);padding:16px;margin-top:14px}
-    .card h2{margin:0 0 10px 0;font-size:16px}
-    .kv{margin:0;padding:0;list-style:none}
-    .kv li{padding:8px 0;border-top:1px solid var(--border);font-size:14px}
-    .kv li:first-child{border-top:none}
-    .muted{font-size:12px}
-    .actions{display:flex;gap:10px;flex-wrap:wrap}
-    footer{margin-top:14px;border:1px solid var(--border);padding:12px 16px;font-size:12px}
-    code{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace}
+    :root{ --text:#111; --muted:#666; --line:#eaeaea; --bg:#fff; }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
+      font-family: system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
+      line-height:1.65; }
+    .wrap{ max-width:880px; margin:0 auto; padding:42px 20px 56px; }
+    .top a{ text-decoration:none; color:inherit; display:flex; align-items:center; gap:14px; }
+    .logo{ height:46px; width:auto; display:block; }
+    h1{ font-size:22px; margin:0; }
+    .sub{ color:var(--muted); margin-top:6px; font-size:14px; }
+    .card{ border:1px solid var(--line); border-radius:14px; padding:18px; margin-top:18px; }
+    .btns{ display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
+    a.btn{ display:inline-block; padding:12px 16px; border-radius:10px; text-decoration:none;
+      border:1px solid var(--text); color:var(--text); font-weight:600; }
+    a.btn.primary{ background:var(--text); color:#fff; }
+    .meta{ margin-top:22px; padding-top:16px; border-top:1px solid var(--line); font-size:14px; color:var(--muted); }
+    footer{ margin-top:18px; font-size:12px; color:var(--muted); }
+    code{ font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <div class="bar">
-      <div>
-        <h1>机构核验 / Verify</h1>
-        <p class="sub">VIYAF — Vienna International Youth Arts Development Foundation（临时落地页）</p>
-      </div>
-      <div class="actions">
-        <a class="btn" href="../">返回首页</a>
+  <main class="wrap">
+    <div class="top">
+      <a href="../">
+        <img class="logo" src="../assets/logo.png" alt="VIYAF logo" />
+        <div>
+          <h1>机构核验 / Verify</h1>
+          <div class="sub">VIYAF — Vienna International Youth Arts Development Foundation</div>
+        </div>
+      </a>
+    </div>
+
+    <section class="card">
+      <p style="margin-top:0;">
+        以下为公开口径的“快速核验信息”（以奥地利官方登记为准）：
+      </p>
+      <ul>
+        <li>奥地利 Firmenbuch 编号：<b><code>FN 653499 d</code></b></li>
+        <li>登记法院：Handelsgericht Wien（维也纳商事法院）</li>
+        <li>法人形态：Privatstiftung（奥地利私营基金会）</li>
+        <li>注册地址：Schweidlgasse 30/2/56, 1020 Wien</li>
+        <li>对外代表：Two-Signature Rule（两名董事共同签署）</li>
+      </ul>
+      <p style="margin-bottom:0; color:var(--muted); font-size:14px;">
+        如需完整的 Firmenbuch Auszug / 合规说明文件，可邮件联系：<a href="mailto:office@viyaf.org">office@viyaf.org</a>。
+      </p>
+
+      <div class="btns">
+        <a class="btn primary" href="../">返回首页</a>
         <a class="btn" href="../pack/">打开资料包 / Pack</a>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <h2>奥地利官方登记信息（摘要）</h2>
-      <ul class="kv">
-        <li><strong>法定德语名称</strong>：Wiener Internationale Jugendkunstentwicklung Privatstiftung</li>
-        <li><strong>Rechtsform</strong>：Privatstiftung（奥地利私营基金会）</li>
-        <li><strong>Firmenbuch-Nummer</strong>：FN 653499 d</li>
-        <li><strong>Zuständiges Gericht</strong>：Handelsgericht Wien</li>
-        <li><strong>Geschäftsanschrift</strong>：Schweidlgasse 30/2/56, 1020 Wien</li>
-        <li><strong>Vertretungsbefugnis</strong>：Two-Signature Rule（两名董事共同签署）</li>
-      </ul>
-      <p class="muted" style="margin:10px 0 0 0;">
-        注：对外展示以“摘要口径”呈现；如需提供官方 Firmenbuch Auszug（PDF/盖章版本的核验文件），可通过邮箱索取。
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>如何快速核验（建议）</h2>
-      <ol style="margin:0; padding-left:18px; font-size:14px;">
-        <li>核对基金会名称与 Firmenbuch 编号：<code>FN 653499 d</code>。</li>
-        <li>核对注册地址：<code>Schweidlgasse 30/2/56, 1020 Wien</code>。</li>
-        <li>核对对外代表规则：<strong>两名董事共同签署</strong>（Two-Signature Rule）。</li>
-        <li>如需官方登记摘录文件（PDF），请邮件联系我们。</li>
-      </ol>
-      <ul class="kv" style="margin-top:12px;">
-        <li><strong>Email</strong>：<a href="mailto:office@viyaf.org">office@viyaf.org</a></li>
-        <li><strong>Tel</strong>：+43 699 1921 0336</li>
-      </ul>
-    </div>
+    <section class="meta">
+      Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a> · Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a>
+    </section>
 
     <footer>
-      <div><strong>Hinweis</strong>：本页为机构信息核验入口，不构成任何投资或证券要约。</div>
-      <div style="margin-top:8px;">© 2025–2026 Wiener Internationale Jugendkunstentwicklung Privatstiftung. All rights reserved.</div>
+      Hinweis: 本页面为信息说明材料；不构成任何投资或证券要约。<br />
+      © 2025–2026 Wiener Internationale Jugendkunstentwicklung Privatstiftung. All rights reserved.
     </footer>
-  </div>
+  </main>
 </body>
 </html>
