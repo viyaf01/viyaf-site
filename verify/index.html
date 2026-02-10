@@ -55,8 +55,25 @@
     .k2{ color:var(--muted); font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 6px 0; }
     .name{ font-size:18px; margin:0 0 6px 0; }
     .role{ color:var(--muted); font-size:14px; margin:0 0 10px 0; }
-    .note{ color:var(--muted); font-size:13px; margin-top:10px; }
-    .credit{ color:var(--muted); font-size:12px; margin-top:8px; }
+
+    /* 关键：把“注释/署名”做成真正的 fine print（更小、更松、更像脚注） */
+    .fineprint{
+      margin-top:14px;
+      padding-top:12px;
+      border-top:1px solid var(--line);
+    }
+    .note{
+      margin:0;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.55;
+    }
+    .credit{
+      margin:8px 0 0 0;
+      color:var(--muted);
+      font-size:11px;
+      letter-spacing:.02em;
+    }
 
     .meta{ margin-top:22px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:13px; }
     footer{ margin-top:14px; color:var(--muted); font-size:12px; }
@@ -124,10 +141,10 @@
               <li><b>国家级荣誉：</b>奥地利“科学与艺术荣誉十字”等</li>
             </ul>
 
-            <p class="note">
-              注：以上为公开版简介摘要；VIYAF 对外治理与法律代表权限以 Firmenbuch 公示登记为准。
-            </p>
-            <p class="credit">Photo © Julia Ostroverkhova</p>
+            <div class="fineprint">
+              <p class="note">注：以上为公开版简介摘要；VIYAF 对外治理与法律代表权限以 Firmenbuch 公示登记为准。</p>
+              <p class="credit">Photo © Julia Ostroverkhova</p>
+            </div>
           </div>
         </div>
       </div>
