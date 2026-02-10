@@ -7,22 +7,34 @@
   <meta name="description" content="VIYAF Verify · Registration & governance quick check" />
   <meta name="theme-color" content="#111111" />
   <style>
-    :root{ --bg:#fff; --text:#111; --muted:#666; --line:#eaeaea; --shadow:0 10px 30px rgba(0,0,0,.06); --r:16px; --gold:#b08a3a; }
+    :root{
+      --bg:#fff; --text:#111; --muted:#666; --line:#eaeaea;
+      --shadow:0 14px 42px rgba(0,0,0,.08);
+      --r:18px; --gold:#b08a3a;
+    }
     *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
-      font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
-      line-height:1.65; }
+    html,body{
+      margin:0; padding:0; background:var(--bg); color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "PingFang SC","Microsoft YaHei","Noto Sans CJK SC", Arial, sans-serif;
+      line-height:1.65;
+    }
     a{ color:inherit; }
-    .wrap{ max-width:980px; margin:0 auto; padding:44px 20px 64px; }
-    header{ display:flex; align-items:center; justify-content:space-between; gap:18px; }
-    .brand{ display:flex; align-items:center; gap:14px; text-decoration:none; }
-    .logo{ height:44px; width:auto; display:block; }
-    .brand h1{ font-size:18px; margin:0; }
-    .brand .sub{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+    .wrap{ max-width:1020px; margin:0 auto; padding:48px 20px 68px; }
+
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:18px; flex-wrap:wrap;
+    }
+    .brand{ display:flex; align-items:center; gap:16px; text-decoration:none; }
+    .logo{ height:80px; width:auto; display:block; }
+    .brand h1{ margin:0; font-size:18px; }
+    .brand .sub{ margin-top:3px; color:var(--muted); font-size:12.5px; }
+
     .nav{ display:flex; gap:10px; flex-wrap:wrap; }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:12px;
+      padding:11px 16px; border-radius:12px;
       border:1px solid var(--text); background:transparent;
       text-decoration:none; font-weight:650; font-size:14px;
       transition: transform .05s ease, opacity .15s ease;
@@ -31,34 +43,81 @@
     .btn:hover{ opacity:.92; }
     .btn:active{ transform: translateY(1px); }
     .btn.primary{ background:var(--text); color:#fff; }
-    .btn.ghost{ border-color:var(--line); background:#fff; }
 
     .hero{
-      margin-top:26px; border:1px solid var(--line); border-radius:var(--r);
-      padding:22px; background:linear-gradient(180deg,#fff,#fbfbfb);
+      margin-top:28px;
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:26px;
+      background:linear-gradient(180deg,#fff,#fbfbfb);
       box-shadow:var(--shadow);
     }
-    .kicker{ display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
-    .dot{ width:6px; height:6px; border-radius:99px; background:var(--gold); display:inline-block; }
-    h2{ margin:10px 0 6px 0; font-size:20px; }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--muted);
+    }
+    .dot{ width:7px; height:7px; border-radius:999px; background:var(--gold); display:inline-block; }
+    h2{ margin:10px 0 6px; font-size:20px; }
     .subline{ margin:0; color:var(--muted); font-size:14px; }
 
     .grid{ margin-top:18px; display:grid; gap:14px; grid-template-columns:repeat(12,1fr); }
     .card{ border:1px solid var(--line); border-radius:var(--r); padding:18px; background:#fff; }
     .card h3{ margin:0 0 8px; font-size:16px; }
     .card ul{ margin:10px 0 0 18px; padding:0; font-size:14px; }
-    .span-12{ grid-column: span 12; }
+    .span-12{ grid-column:span 12; }
 
-    .profile{ display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start; }
-    .avatar{ width:170px; max-width:100%; border-radius:14px; border:1px solid var(--line); display:block; }
-    .profile-body{ flex:1; min-width:260px; }
-    .k2{ color:var(--muted); font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 6px 0; }
+    /* Profile */
+    .profile{ display:flex; gap:18px; flex-wrap:wrap; align-items:flex-start; }
+    .avatar{
+      width:255px; max-width:100%;
+      border-radius:16px;
+      border:1px solid var(--line);
+      display:block;
+      box-shadow:0 10px 28px rgba(0,0,0,.10);
+    }
+    .profile-body{ flex:1; min-width:280px; }
+    .k2{
+      color:var(--muted);
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin:0 0 6px 0;
+    }
     .name{ font-size:18px; margin:0 0 6px 0; }
     .role{ color:var(--muted); font-size:14px; margin:0 0 10px 0; }
 
-    /* 关键：把“注释/署名”做成真正的 fine print（更小、更松、更像脚注） */
-    .fineprint{
+    /* Key facts: 三张小标签卡片 */
+    .facts{
       margin-top:14px;
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0, 1fr));
+      gap:10px;
+    }
+    .fact{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px 12px 11px;
+      background:linear-gradient(180deg,#fff,#fcfcfc);
+    }
+    .fact .fk{
+      display:flex; align-items:center; gap:8px;
+      font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--muted);
+      margin:0 0 6px 0;
+    }
+    .fact .fv{
+      margin:0;
+      font-size:13.5px;
+      color:var(--text);
+      font-weight:650;
+      line-height:1.45;
+    }
+    .gdot{ width:6px; height:6px; border-radius:999px; background:var(--gold); display:inline-block; }
+
+    /* Fine print */
+    .fineprint{
+      margin-top:16px;
       padding-top:12px;
       border-top:1px solid var(--line);
     }
@@ -69,24 +128,38 @@
       line-height:1.55;
     }
     .credit{
-      margin:8px 0 0 0;
+      margin:9px 0 0 0;
       color:var(--muted);
       font-size:11px;
       letter-spacing:.02em;
     }
 
-    .meta{ margin-top:22px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:13px; }
+    .meta{
+      margin-top:22px;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+      color:var(--muted);
+      font-size:13px;
+    }
     footer{ margin-top:14px; color:var(--muted); font-size:12px; }
     code{ font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
-    @media (max-width:860px){ header{ flex-direction:column; align-items:flex-start; } }
+
+    @media (max-width:860px){
+      .facts{ grid-template-columns:1fr; }
+    }
+    @media (max-width:560px){
+      .logo{ height:60px; }
+      .avatar{ width:210px; }
+      .btn{ width:100%; }
+    }
   </style>
 </head>
 
 <body>
   <main class="wrap">
     <header>
-      <a class="brand" href="/">
-        <img class="logo" src="/assets/logo.png" alt="" />
+      <a class="brand" href="../">
+        <img class="logo" src="../assets/logo.png" alt="VIYAF" />
         <div>
           <h1>机构核验 / Verify</h1>
           <div class="sub">VIYAF — Vienna International Youth Arts Development Foundation</div>
@@ -94,8 +167,8 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a class="btn primary" href="/pack/">打开资料包 / Pack</a>
-        <a class="btn ghost" href="/">返回首页</a>
+        <a class="btn primary" href="../pack/">打开资料包 / Pack</a>
+        <a class="btn" href="../">返回首页</a>
       </nav>
     </header>
 
@@ -122,7 +195,7 @@
 
       <div class="card span-12" aria-label="Board member profile">
         <div class="profile">
-          <img class="avatar" src="/assets/elzbieta-wiedner-zajac.jpg" alt="Prof. Mag. Elzbieta Wiedner‑Zajac portrait" />
+          <img class="avatar" src="../assets/elzbieta-wiedner-zajac.jpg" alt="Prof. Mag. Elzbieta Wiedner‑Zajac" />
           <div class="profile-body">
             <p class="k2">Governance · Board (Stiftungsvorstand)</p>
             <h3 class="name">（Stiftungsvorstand）董事会成员｜Prof. Mag. Elzbieta Wiedner‑Zajac</h3>
@@ -135,11 +208,20 @@
               以及波兰共和国重要文化与国家勋章等荣誉。
             </p>
 
-            <ul style="margin:12px 0 0 18px;">
-              <li><b>维也纳学术背书：</b>mdw（维也纳国立音乐与表演艺术大学）长期教学与大师班体系</li>
-              <li><b>殿堂级舞台经验：</b>维也纳音乐协会金色大厅等重要舞台</li>
-              <li><b>国家级荣誉：</b>奥地利“科学与艺术荣誉十字”等</li>
-            </ul>
+            <div class="facts" aria-label="Key facts">
+              <div class="fact">
+                <p class="fk"><span class="gdot"></span> Academic</p>
+                <p class="fv">mdw 长期任教 · Habilitation（教授资格）</p>
+              </div>
+              <div class="fact">
+                <p class="fk"><span class="gdot"></span> Stage</p>
+                <p class="fv">维也纳音乐协会金色大厅等重要舞台经验</p>
+              </div>
+              <div class="fact">
+                <p class="fk"><span class="gdot"></span> Honors</p>
+                <p class="fv">奥地利“科学与艺术荣誉十字”等国家级荣誉</p>
+              </div>
+            </div>
 
             <div class="fineprint">
               <p class="note">注：以上为公开版简介摘要；VIYAF 对外治理与法律代表权限以 Firmenbuch 公示登记为准。</p>
@@ -151,8 +233,9 @@
     </section>
 
     <section class="meta" aria-label="Contact">
-      Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a> · Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a><br />
-      Address: Schweidlgasse 30/2/56, 1020 Wien · FN <code>653499 d</code>
+      Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a> ·
+      Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a><br />
+      Address: Schweidlgasse 30/2/56, 1020 Wien · Firmenbuch: <b>FN 653499 d</b>
     </section>
 
     <footer>
