@@ -4,29 +4,26 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIYAF Pack — Vienna International Youth Arts Development Foundation</title>
-  <meta name="description" content="VIYAF Pack · Brochure & documents access" />
+  <meta name="description" content="VIYAF Pack · Request brochure & public documents" />
   <meta name="theme-color" content="#111111" />
   <style>
-    :root{
-      --bg:#ffffff; --text:#111111; --muted:#666666; --line:#eaeaea; --soft:#f7f7f7;
-      --shadow: 0 10px 30px rgba(0,0,0,.06); --r:16px; --gold:#b08a3a;
-    }
+    :root{ --bg:#fff; --text:#111; --muted:#666; --line:#eaeaea; --shadow:0 10px 30px rgba(0,0,0,.06); --r:16px; --gold:#b08a3a; }
     *{ box-sizing:border-box; }
     html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-        "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC", Arial, sans-serif;
+      font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
       line-height:1.65; }
     a{ color:inherit; }
     .wrap{ max-width:980px; margin:0 auto; padding:44px 20px 64px; }
     header{ display:flex; align-items:center; justify-content:space-between; gap:18px; }
     .brand{ display:flex; align-items:center; gap:14px; text-decoration:none; }
     .logo{ height:44px; width:auto; display:block; }
-    .brand h1{ font-size:18px; margin:0; letter-spacing:.2px; }
+    .brand h1{ font-size:18px; margin:0; }
     .brand .sub{ font-size:12.5px; color:var(--muted); margin-top:2px; }
     .nav{ display:flex; gap:10px; flex-wrap:wrap; }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:12px; border:1px solid var(--text);
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--text); background:transparent;
       text-decoration:none; font-weight:650; font-size:14px;
       transition: transform .05s ease, opacity .15s ease;
       white-space:nowrap;
@@ -35,35 +32,32 @@
     .btn:active{ transform: translateY(1px); }
     .btn.primary{ background:var(--text); color:#fff; }
     .btn.ghost{ border-color:var(--line); background:#fff; }
+
     .hero{
       margin-top:26px; border:1px solid var(--line); border-radius:var(--r);
-      padding:22px; background: linear-gradient(180deg, #ffffff, #fbfbfb);
-      box-shadow: var(--shadow);
+      padding:22px; background:linear-gradient(180deg,#fff,#fbfbfb);
+      box-shadow:var(--shadow);
     }
-    .kicker{ display:inline-flex; align-items:center; gap:8px;
-      font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+    .kicker{ display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
     .dot{ width:6px; height:6px; border-radius:99px; background:var(--gold); display:inline-block; }
-    h2{ margin:10px 0 6px 0; font-size:20px; letter-spacing:.2px; }
+    h2{ margin:10px 0 6px 0; font-size:20px; }
     .subline{ margin:0; color:var(--muted); font-size:14px; }
-    .grid{ margin-top:18px; display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
-    .card{ border:1px solid var(--line); border-radius:var(--r); padding:18px; background:#fff; }
+
+    .card{ margin-top:14px; border:1px solid var(--line); border-radius:var(--r); padding:18px; background:#fff; }
     .card h3{ margin:0 0 8px; font-size:16px; }
-    .card p{ margin:0; color:var(--muted); font-size:14px; }
-    .card ul{ margin:10px 0 0 18px; padding:0; font-size:14px; }
-    .span-6{ grid-column: span 6; }
-    .span-12{ grid-column: span 12; }
+    .card ul{ margin:8px 0 0 18px; padding:0; font-size:14px; }
     .meta{ margin-top:22px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:13px; }
     footer{ margin-top:14px; color:var(--muted); font-size:12px; }
-    code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; }
-    @media (max-width:860px){ .span-6{ grid-column: span 12; } header{ flex-direction:column; align-items:flex-start; } }
+    code{ font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
+    @media (max-width:860px){ header{ flex-direction:column; align-items:flex-start; } }
   </style>
 </head>
 
 <body>
   <main class="wrap">
     <header>
-      <a class="brand" href="../">
-        <img class="logo" src="../assets/logo.png" alt="VIYAF logo" />
+      <a class="brand" href="/">
+        <img class="logo" src="/assets/logo.png" alt="" />
         <div>
           <h1>打开资料包 / Pack</h1>
           <div class="sub">VIYAF — Vienna International Youth Arts Development Foundation</div>
@@ -71,47 +65,34 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a class="btn" href="../verify/">机构核验 / Verify</a>
-        <a class="btn ghost" href="../">返回首页</a>
+        <a class="btn" href="/verify/">机构核验 / Verify</a>
+        <a class="btn ghost" href="/">返回首页</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="kicker"><span class="dot"></span> Pack landing page</div>
+      <div class="kicker"><span class="dot"></span> Pack request</div>
       <h2>资料包获取（对外沟通专用）</h2>
       <p class="subline">
-        为避免版本混乱，核心文件以“当期版本口径”为准；如需完整版（含附件/矩阵/证明材料），请邮件索取。
+        为保证版本一致与合规管理，本页不提供公开直链下载。资料包由 VIYAF 通过邮件发送（当期版）。
       </p>
 
       <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn primary" href="mailto:office@viyaf.org?subject=VIYAF%20Pack%20Request&body=您好，%0A%0A我希望获取VIYAF资料包（当期版），用于内部评估/沟通。%0A请发送可公开版本的PDF/说明文件。%0A%0A姓名：%0A机构：%0A电话：%0A%0A谢谢。">一键索取资料包（Email）</a>
-        <a class="btn" href="../verify/">先做机构核验 / Verify</a>
+        <a class="btn primary" href="mailto:office@viyaf.org?subject=VIYAF%20Pack%20Request&body=您好，%0A%0A我希望获取VIYAF资料包（当期版）用于内部评估/合作沟通。%0A%0A姓名：%0A机构：%0A用途：%0A电话：%0A%0A谢谢。">一键索取资料包（Email）</a>
+        <a class="btn" href="/verify/">先做机构核验 / Verify</a>
       </div>
     </section>
 
-    <section class="grid" aria-label="Pack contents">
-      <div class="card span-12">
-        <h3>资料包目录（公开口径）</h3>
-        <ul>
-          <li><b>《VIYAF 募资宣传册》</b>（中文版 v01/26，A5）— 通过邮件发送当期 PDF</li>
-          <li><b>Donor Benefits Matrix（当期版）</b>— 通过邮件发送（按需提供）</li>
-          <li><b>Firmenbuch Auszug / 合规说明</b>— 通过邮件发送（按需提供）</li>
-          <li><b>品牌素材（Logo/Seal）</b>— 对合作伙伴按需提供（用途与范围可备注）</li>
-        </ul>
-        <p style="margin-top:10px; color:var(--muted); font-size:13px;">
-          提示：如需纸质册（深圳/香港/北京会谈场景用），建议 A5 竖版、16–24P、哑粉纸+骑马钉；印刷可按你方需求或交由设计团队统一把控工艺。
-        </p>
-      </div>
-
-      <div class="card span-6">
-        <h3>建议你在邮件里附带的信息</h3>
-        <p>姓名/机构/用途（内部评估或合作洽谈）+ 你希望重点看的部分（治理/项目/捐赠等级/合规）。</p>
-      </div>
-
-      <div class="card span-6">
-        <h3>为什么要这样做（第一性原则）</h3>
-        <p>让对方“轻松拿到、带回去愿意看、次日还能继续看”，同时避免版本混乱与信息过载。</p>
-      </div>
+    <section class="card" aria-label="Pack includes">
+      <h3>公开版资料包（包含）</h3>
+      <ul>
+        <li>《VIYAF 募资宣传册》PDF（中文版 v01/26）</li>
+        <li>捐赠流程与联系信息（与当期版本口径一致）</li>
+        <li>如需附件/矩阵/证明材料：按需通过邮件提供</li>
+      </ul>
+      <p style="margin-top:10px; color:#666; font-size:13px;">
+        若需纸质手册（A5 竖版，16–24P）或印刷建议，请在邮件中备注“纸质版需求”。
+      </p>
     </section>
 
     <section class="meta" aria-label="Contact">
