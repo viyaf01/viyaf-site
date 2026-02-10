@@ -7,9 +7,11 @@
   <meta name="description" content="VIYAF Verify · Registration & governance quick check" />
   <style>
     :root{ --text:#111; --muted:#666; --line:#eaeaea; --bg:#fff; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
+    html,body{
+      margin:0; padding:0; background:var(--bg); color:var(--text);
       font-family: system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
-      line-height:1.65; }
+      line-height:1.65;
+    }
     .wrap{ max-width:880px; margin:0 auto; padding:42px 20px 56px; }
     .top a{ text-decoration:none; color:inherit; display:flex; align-items:center; gap:14px; }
     .logo{ height:46px; width:auto; display:block; }
@@ -17,12 +19,43 @@
     .sub{ color:var(--muted); margin-top:6px; font-size:14px; }
     .card{ border:1px solid var(--line); border-radius:14px; padding:18px; margin-top:18px; }
     .btns{ display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
-    a.btn{ display:inline-block; padding:12px 16px; border-radius:10px; text-decoration:none;
-      border:1px solid var(--text); color:var(--text); font-weight:600; }
+    a.btn{
+      display:inline-block; padding:12px 16px; border-radius:10px; text-decoration:none;
+      border:1px solid var(--text); color:var(--text); font-weight:600;
+    }
     a.btn.primary{ background:var(--text); color:#fff; }
     .meta{ margin-top:22px; padding-top:16px; border-top:1px solid var(--line); font-size:14px; color:var(--muted); }
     footer{ margin-top:18px; font-size:12px; color:var(--muted); }
     code{ font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
+
+    /* Profile block */
+    .profile{
+      display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start;
+    }
+    .avatar{
+      width:170px; max-width:100%;
+      border-radius:12px; border:1px solid var(--line);
+      display:block;
+    }
+    .profile-body{
+      flex:1; min-width:260px;
+    }
+    .kicker{
+      color:var(--muted); font-size:12px; letter-spacing:.02em; text-transform:uppercase;
+      margin:0 0 6px 0;
+    }
+    .name{
+      font-size:18px; margin:0 0 6px 0;
+    }
+    .role{
+      color:var(--muted); font-size:14px; margin:0 0 10px 0;
+    }
+    .note{
+      color:var(--muted); font-size:13px; margin-top:10px;
+    }
+    .credit{
+      color:var(--muted); font-size:12px; margin-top:8px;
+    }
   </style>
 </head>
 <body>
@@ -37,6 +70,7 @@
       </a>
     </div>
 
+    <!-- Quick verification -->
     <section class="card">
       <p style="margin-top:0;">
         以下为公开口径的“快速核验信息”（以奥地利官方登记为准）：
@@ -48,8 +82,10 @@
         <li>注册地址：Schweidlgasse 30/2/56, 1020 Wien</li>
         <li>对外代表：Two-Signature Rule（两名董事共同签署）</li>
       </ul>
+
       <p style="margin-bottom:0; color:var(--muted); font-size:14px;">
-        如需完整的 Firmenbuch Auszug / 合规说明文件，可邮件联系：<a href="mailto:office@viyaf.org">office@viyaf.org</a>。
+        如需完整的 Firmenbuch Auszug / 合规说明文件，可邮件联系：
+        <a href="mailto:office@viyaf.org">office@viyaf.org</a>。
       </p>
 
       <div class="btns">
@@ -58,8 +94,44 @@
       </div>
     </section>
 
+    <!-- Board member profile (public card) -->
+    <section class="card" aria-label="Board member profile">
+      <div class="profile">
+        <img
+          class="avatar"
+          src="../assets/elzbieta-wiedner-zajac.jpg"
+          alt="Elzbieta Wiedner‑Zajac portrait"
+        />
+        <div class="profile-body">
+          <p class="kicker">Board · Stiftungsvorstand</p>
+          <h2 class="name">（Stiftungsvorstand）董事会成员｜Elzbieta Wiedner‑Zajac（Mag.）</h2>
+          <p class="role">钢琴家 · 作曲家 · 教育家（维也纳）</p>
+
+          <p style="margin:0;">
+            旅居维也纳的钢琴家、作曲家与教育家。曾在维也纳国立音乐与表演艺术大学（mdw）长期任教，
+            并获教授资格（Habilitation）。其艺术活动与学术影响遍及国际舞台，多次在维也纳音乐协会金色大厅等重要场馆演出；
+            录音与出版作品获得专业领域广泛评价。她同时活跃于多家国际音乐与学术机构，并获奥地利共和国
+            “科学与艺术荣誉十字”及波兰共和国重要文化与国家勋章等荣誉。
+          </p>
+
+          <ul style="margin:12px 0 0 18px;">
+            <li><b>维也纳学术背书：</b>mdw（维也纳国立音乐与表演艺术大学）长期教学与大师班体系</li>
+            <li><b>殿堂级舞台经验：</b>维也纳音乐协会金色大厅等重要舞台</li>
+            <li><b>国家级荣誉认证：</b>奥地利“科学与艺术荣誉十字”等（可核验）</li>
+          </ul>
+
+          <p class="note">
+            注：以上为公开版简介摘要；VIYAF 对外治理与法律代表权限以 Firmenbuch 公示登记为准。
+          </p>
+
+          <p class="credit">Photo © Julia Ostroverkhova</p>
+        </div>
+      </div>
+    </section>
+
     <section class="meta">
-      Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a> · Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a>
+      Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a> ·
+      Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a>
     </section>
 
     <footer>
