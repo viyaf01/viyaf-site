@@ -7,29 +7,23 @@
   <meta name="description" content="VIYAF Verify · Registration & governance quick check" />
   <meta name="theme-color" content="#111111" />
   <style>
-    :root{
-      --bg:#ffffff; --text:#111111; --muted:#666666; --line:#eaeaea; --soft:#f7f7f7;
-      --shadow: 0 10px 30px rgba(0,0,0,.06); --r:16px; --gold:#b08a3a;
-    }
+    :root{ --bg:#fff; --text:#111; --muted:#666; --line:#eaeaea; --shadow:0 10px 30px rgba(0,0,0,.06); --r:16px; --gold:#b08a3a; }
     *{ box-sizing:border-box; }
-    html,body{
-      margin:0; padding:0; background:var(--bg); color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-        "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC", Arial, sans-serif;
-      line-height:1.65;
-    }
+    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
+      font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
+      line-height:1.65; }
     a{ color:inherit; }
     .wrap{ max-width:980px; margin:0 auto; padding:44px 20px 64px; }
-
     header{ display:flex; align-items:center; justify-content:space-between; gap:18px; }
     .brand{ display:flex; align-items:center; gap:14px; text-decoration:none; }
     .logo{ height:44px; width:auto; display:block; }
-    .brand h1{ font-size:18px; margin:0; letter-spacing:.2px; }
+    .brand h1{ font-size:18px; margin:0; }
     .brand .sub{ font-size:12.5px; color:var(--muted); margin-top:2px; }
     .nav{ display:flex; gap:10px; flex-wrap:wrap; }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:12px; border:1px solid var(--text);
+      padding:10px 14px; border-radius:12px;
+      border:1px solid var(--text); background:transparent;
       text-decoration:none; font-weight:650; font-size:14px;
       transition: transform .05s ease, opacity .15s ease;
       white-space:nowrap;
@@ -41,30 +35,22 @@
 
     .hero{
       margin-top:26px; border:1px solid var(--line); border-radius:var(--r);
-      padding:22px; background: linear-gradient(180deg, #ffffff, #fbfbfb);
-      box-shadow: var(--shadow);
+      padding:22px; background:linear-gradient(180deg,#fff,#fbfbfb);
+      box-shadow:var(--shadow);
     }
-    .kicker{ display:inline-flex; align-items:center; gap:8px;
-      font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
+    .kicker{ display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
     .dot{ width:6px; height:6px; border-radius:99px; background:var(--gold); display:inline-block; }
-    h2{ margin:10px 0 6px 0; font-size:20px; letter-spacing:.2px; }
+    h2{ margin:10px 0 6px 0; font-size:20px; }
     .subline{ margin:0; color:var(--muted); font-size:14px; }
 
-    .grid{ margin-top:18px; display:grid; gap:14px; grid-template-columns: repeat(12, 1fr); }
+    .grid{ margin-top:18px; display:grid; gap:14px; grid-template-columns:repeat(12,1fr); }
     .card{ border:1px solid var(--line); border-radius:var(--r); padding:18px; background:#fff; }
     .card h3{ margin:0 0 8px; font-size:16px; }
-    .card p{ margin:0; color:var(--muted); font-size:14px; }
     .card ul{ margin:10px 0 0 18px; padding:0; font-size:14px; }
-    .span-6{ grid-column: span 6; }
     .span-12{ grid-column: span 12; }
 
-    /* profile */
     .profile{ display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start; }
-    .avatar{
-      width:170px; max-width:100%;
-      border-radius:14px; border:1px solid var(--line);
-      display:block;
-    }
+    .avatar{ width:170px; max-width:100%; border-radius:14px; border:1px solid var(--line); display:block; }
     .profile-body{ flex:1; min-width:260px; }
     .k2{ color:var(--muted); font-size:12px; letter-spacing:.12em; text-transform:uppercase; margin:0 0 6px 0; }
     .name{ font-size:18px; margin:0 0 6px 0; }
@@ -74,16 +60,16 @@
 
     .meta{ margin-top:22px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:13px; }
     footer{ margin-top:14px; color:var(--muted); font-size:12px; }
-    code{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace; }
-    @media (max-width:860px){ .span-6{ grid-column: span 12; } header{ flex-direction:column; align-items:flex-start; } }
+    code{ font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
+    @media (max-width:860px){ header{ flex-direction:column; align-items:flex-start; } }
   </style>
 </head>
 
 <body>
   <main class="wrap">
     <header>
-      <a class="brand" href="../">
-        <img class="logo" src="../assets/logo.png" alt="VIYAF logo" />
+      <a class="brand" href="/">
+        <img class="logo" src="/assets/logo.png" alt="" />
         <div>
           <h1>机构核验 / Verify</h1>
           <div class="sub">VIYAF — Vienna International Youth Arts Development Foundation</div>
@@ -91,8 +77,8 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a class="btn primary" href="../pack/">打开资料包 / Pack</a>
-        <a class="btn ghost" href="../">返回首页</a>
+        <a class="btn primary" href="/pack/">打开资料包 / Pack</a>
+        <a class="btn ghost" href="/">返回首页</a>
       </nav>
     </header>
 
@@ -112,16 +98,16 @@
           <li>注册地址：Schweidlgasse 30/2/56, 1020 Wien</li>
           <li>对外代表：Two-Signature Rule（两名董事共同签署）</li>
         </ul>
-        <p style="margin-top:10px; color:var(--muted); font-size:13px;">
+        <p style="margin-top:10px; color:#666; font-size:13px;">
           如需 Firmenbuch Auszug / 合规说明文件，可邮件联系：<a href="mailto:office@viyaf.org">office@viyaf.org</a>。
         </p>
       </div>
 
       <div class="card span-12" aria-label="Board member profile">
         <div class="profile">
-          <img class="avatar" src="../assets/elzbieta-wiedner-zajac.jpg" alt="Prof. Mag. Elzbieta Wiedner‑Zajac portrait" />
+          <img class="avatar" src="/assets/elzbieta-wiedner-zajac.jpg" alt="Prof. Mag. Elzbieta Wiedner‑Zajac portrait" />
           <div class="profile-body">
-            <p class="k2">Governance · Board Member (Stiftungsvorstand)</p>
+            <p class="k2">Governance · Board (Stiftungsvorstand)</p>
             <h3 class="name">（Stiftungsvorstand）董事会成员｜Prof. Mag. Elzbieta Wiedner‑Zajac</h3>
             <p class="role">钢琴家 · 作曲家 · 教育家（维也纳）</p>
 
