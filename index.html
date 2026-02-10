@@ -7,21 +7,15 @@
   <meta name="description" content="VIYAF official micro-site · Coming soon. Pack & Verify landing pages." />
   <meta name="theme-color" content="#111111" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="VIYAF — Vienna International Youth Arts Development Foundation" />
-  <meta property="og:description" content="Official micro-site · Coming soon. Pack & Verify landing pages." />
-  <meta property="og:type" content="website" />
-
   <style>
     :root{
       --bg:#ffffff;
       --text:#111111;
       --muted:#666666;
       --line:#eaeaea;
-      --soft:#f7f7f7;
       --shadow: 0 10px 30px rgba(0,0,0,.06);
       --r:16px;
-      --gold:#b08a3a; /* subtle Vienna-gold accent */
+      --gold:#b08a3a;
     }
     *{ box-sizing:border-box; }
     html,body{
@@ -43,14 +37,17 @@
       display:inline-flex; align-items:center; justify-content:center;
       padding:10px 14px; border-radius:12px;
       border:1px solid var(--text);
+      background:transparent;
       text-decoration:none; font-weight:650; font-size:14px;
       transition: transform .05s ease, opacity .15s ease;
       white-space:nowrap;
+      cursor:pointer;
     }
     .btn:hover{ opacity:.92; }
     .btn:active{ transform: translateY(1px); }
     .btn.primary{ background:var(--text); color:#fff; }
     .btn.ghost{ border-color:var(--line); background:#fff; }
+
     .hero{
       margin-top:26px;
       border:1px solid var(--line);
@@ -68,6 +65,7 @@
     .headline{ margin:10px 0 8px 0; font-size:22px; line-height:1.35; letter-spacing:.2px; }
     .tagline{ margin:0; color:var(--muted); font-size:14px; }
     .cta{ margin-top:16px; display:flex; gap:12px; flex-wrap:wrap; }
+
     .grid{
       margin-top:18px;
       display:grid; gap:14px;
@@ -84,6 +82,7 @@
     .card ul{ margin:10px 0 0 18px; padding:0; color:var(--text); font-size:14px; }
     .span-6{ grid-column: span 6; }
     .span-12{ grid-column: span 12; }
+
     .meta{
       margin-top:22px;
       border-top:1px solid var(--line);
@@ -91,6 +90,9 @@
       color:var(--muted);
       font-size:13px;
     }
+    .meta .row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:10px; }
+    .hint{ margin-top:8px; font-size:12px; color:var(--muted); }
+
     footer{
       margin-top:14px;
       color:var(--muted);
@@ -100,9 +102,9 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
       font-size: .95em;
     }
+
     @media (max-width:860px){
       .span-6{ grid-column: span 12; }
-      .nav{ justify-content:flex-start; }
       header{ align-items:flex-start; flex-direction:column; }
     }
   </style>
@@ -111,8 +113,8 @@
 <body>
   <main class="wrap">
     <header>
-      <a class="brand" href="./">
-        <img class="logo" src="assets/logo.png" alt="VIYAF logo" />
+      <a class="brand" href="/">
+        <img class="logo" src="/assets/logo.png" alt="" />
         <div>
           <h1>VIYAF — Vienna International Youth Arts Development Foundation</h1>
           <div class="sub">Wiener Internationale Jugendkunstentwicklung Privatstiftung · FN <code>653499 d</code></div>
@@ -120,9 +122,9 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a class="btn primary" href="pack/">打开资料包 / Pack</a>
-        <a class="btn" href="verify/">机构核验 / Verify</a>
-        <a class="btn ghost" href="mailto:office@viyaf.org">联系 / Email</a>
+        <a class="btn primary" href="/pack/">打开资料包 / Pack</a>
+        <a class="btn" href="/verify/">机构核验 / Verify</a>
+        <a class="btn ghost" href="#contact">联系 / Contact</a>
       </nav>
     </header>
 
@@ -132,8 +134,8 @@
       <p class="tagline">在世界音乐之都，孕育全球新生代艺术领袖。｜官网预计 2026 Q2 上线</p>
 
       <div class="cta">
-        <a class="btn primary" href="pack/">打开资料包 / Pack</a>
-        <a class="btn" href="verify/">机构核验 / Verify</a>
+        <a class="btn primary" href="/pack/">打开资料包 / Pack</a>
+        <a class="btn" href="/verify/">机构核验 / Verify</a>
       </div>
     </section>
 
@@ -144,29 +146,36 @@
       </div>
 
       <div class="card span-6">
-        <h2>三件“确定的事”</h2>
+        <h2>Trust & Governance</h2>
         <ul>
-          <li>一线舞台与国际连接（以当期排期与项目方案为准）</li>
-          <li>可验证的“成长资产”交付（学分/证书、节目单、影像档案、导师评估等）</li>
-          <li>清晰可查的透明机制（收据、交付归档、定期报告与审计口径）</li>
+          <li>奥地利 Firmenbuch 登记：FN <code>653499 d</code></li>
+          <li>对外代表：Two-Signature Rule（两名董事共同签署）</li>
+          <li>KYC/AML、GDPR、未成年人保护、利益冲突回避等合规机制</li>
         </ul>
       </div>
 
       <div class="card span-12">
-        <h2>Trust & Governance</h2>
+        <h2>三个关键交付（以当期项目为准）</h2>
         <ul>
-          <li>奥地利 Firmenbuch 登记信息可核验：FN <code>653499 d</code></li>
-          <li>对外代表双签制度（Two-Signature Rule）：两名董事共同签署</li>
-          <li>合规贯穿全流程：KYC/AML、GDPR、未成年人保护、利益冲突申报与回避</li>
+          <li>一线舞台与国际连接：维也纳及欧洲一线演出与交流平台</li>
+          <li>可验证的成果材料：学分/证书、节目单、影像档案、导师评估等</li>
+          <li>透明机制：收据、执行归档、定期报告与审计口径</li>
         </ul>
       </div>
     </section>
 
-    <section class="meta" aria-label="Contact">
+    <section class="meta" id="contact" aria-label="Contact">
       <div><b>Kontakt</b></div>
-      <div>Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a> · Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a></div>
+      <div>Email: <a id="emailLink" href="mailto:office@viyaf.org">office@viyaf.org</a> · Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a></div>
       <div>Address: Schweidlgasse 30/2/56, 1020 Wien</div>
       <div>Domain: <a href="https://www.viyaf.org/">www.viyaf.org</a></div>
+
+      <div class="row" aria-label="Contact actions">
+        <a class="btn primary" href="mailto:office@viyaf.org">发送邮件 / Email</a>
+        <button class="btn ghost" type="button" id="copyBtn">复制邮箱</button>
+        <span class="hint" id="copyStatus" aria-live="polite"></span>
+      </div>
+      <div class="hint">提示：若浏览器未配置默认邮箱客户端，点击“发送邮件”可能无弹窗；可直接复制邮箱地址使用。</div>
     </section>
 
     <footer>
@@ -174,5 +183,29 @@
       © 2025–2026 Wiener Internationale Jugendkunstentwicklung Privatstiftung. All rights reserved.
     </footer>
   </main>
+
+  <script>
+    (function(){
+      const btn = document.getElementById('copyBtn');
+      const status = document.getElementById('copyStatus');
+      const email = 'office@viyaf.org';
+
+      function setStatus(msg){
+        status.textContent = msg;
+        if(msg) setTimeout(()=> status.textContent = '', 2200);
+      }
+
+      btn.addEventListener('click', async () => {
+        try{
+          await navigator.clipboard.writeText(email);
+          setStatus('已复制');
+        }catch(e){
+          // fallback
+          const ok = window.prompt('复制此邮箱（手动复制）：', email);
+          setStatus(ok !== null ? '请手动复制完成' : '');
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
