@@ -4,25 +4,37 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VIYAF Pack — Vienna International Youth Arts Development Foundation</title>
-  <meta name="description" content="VIYAF Pack · Request brochure & public documents" />
+  <meta name="description" content="VIYAF Pack · Materials request landing page" />
   <meta name="theme-color" content="#111111" />
   <style>
-    :root{ --bg:#fff; --text:#111; --muted:#666; --line:#eaeaea; --shadow:0 10px 30px rgba(0,0,0,.06); --r:16px; --gold:#b08a3a; }
+    :root{
+      --bg:#fff; --text:#111; --muted:#666; --line:#eaeaea;
+      --shadow:0 14px 42px rgba(0,0,0,.08);
+      --r:18px; --gold:#b08a3a;
+    }
     *{ box-sizing:border-box; }
-    html,body{ margin:0; padding:0; background:var(--bg); color:var(--text);
-      font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Noto Sans CJK SC",Arial,sans-serif;
-      line-height:1.65; }
+    html,body{
+      margin:0; padding:0; background:var(--bg); color:var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "PingFang SC","Microsoft YaHei","Noto Sans CJK SC", Arial, sans-serif;
+      line-height:1.65;
+    }
     a{ color:inherit; }
-    .wrap{ max-width:980px; margin:0 auto; padding:44px 20px 64px; }
-    header{ display:flex; align-items:center; justify-content:space-between; gap:18px; }
-    .brand{ display:flex; align-items:center; gap:14px; text-decoration:none; }
-    .logo{ height:44px; width:auto; display:block; }
-    .brand h1{ font-size:18px; margin:0; }
-    .brand .sub{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+    .wrap{ max-width:1020px; margin:0 auto; padding:48px 20px 68px; }
+
+    header{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:18px; flex-wrap:wrap;
+    }
+    .brand{ display:flex; align-items:center; gap:16px; text-decoration:none; }
+    .logo{ height:80px; width:auto; display:block; }
+    .brand h1{ margin:0; font-size:18px; }
+    .brand .sub{ margin-top:3px; color:var(--muted); font-size:12.5px; }
+
     .nav{ display:flex; gap:10px; flex-wrap:wrap; }
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding:10px 14px; border-radius:12px;
+      padding:11px 16px; border-radius:12px;
       border:1px solid var(--text); background:transparent;
       text-decoration:none; font-weight:650; font-size:14px;
       transition: transform .05s ease, opacity .15s ease;
@@ -31,33 +43,56 @@
     .btn:hover{ opacity:.92; }
     .btn:active{ transform: translateY(1px); }
     .btn.primary{ background:var(--text); color:#fff; }
-    .btn.ghost{ border-color:var(--line); background:#fff; }
 
     .hero{
-      margin-top:26px; border:1px solid var(--line); border-radius:var(--r);
-      padding:22px; background:linear-gradient(180deg,#fff,#fbfbfb);
+      margin-top:28px;
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:26px;
+      background:linear-gradient(180deg,#fff,#fbfbfb);
       box-shadow:var(--shadow);
     }
-    .kicker{ display:inline-flex; align-items:center; gap:8px; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); }
-    .dot{ width:6px; height:6px; border-radius:99px; background:var(--gold); display:inline-block; }
-    h2{ margin:10px 0 6px 0; font-size:20px; }
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-size:12px; letter-spacing:.14em; text-transform:uppercase;
+      color:var(--muted);
+    }
+    .dot{ width:7px; height:7px; border-radius:999px; background:var(--gold); display:inline-block; }
+    h2{ margin:10px 0 6px; font-size:20px; }
     .subline{ margin:0; color:var(--muted); font-size:14px; }
 
-    .card{ margin-top:14px; border:1px solid var(--line); border-radius:var(--r); padding:18px; background:#fff; }
+    .card{
+      margin-top:16px;
+      border:1px solid var(--line);
+      border-radius:var(--r);
+      padding:18px;
+      background:#fff;
+    }
     .card h3{ margin:0 0 8px; font-size:16px; }
-    .card ul{ margin:8px 0 0 18px; padding:0; font-size:14px; }
-    .meta{ margin-top:22px; border-top:1px solid var(--line); padding-top:16px; color:var(--muted); font-size:13px; }
+    .card ul{ margin:10px 0 0 18px; padding:0; font-size:14px; color:#111; }
+    .cta{ display:flex; gap:12px; flex-wrap:wrap; margin-top:14px; }
+
+    .meta{
+      margin-top:22px;
+      border-top:1px solid var(--line);
+      padding-top:16px;
+      color:var(--muted);
+      font-size:13px;
+    }
     footer{ margin-top:14px; color:var(--muted); font-size:12px; }
-    code{ font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; }
-    @media (max-width:860px){ header{ flex-direction:column; align-items:flex-start; } }
+
+    @media (max-width:560px){
+      .logo{ height:60px; }
+      .btn{ width:100%; }
+    }
   </style>
 </head>
 
 <body>
   <main class="wrap">
     <header>
-      <a class="brand" href="/">
-        <img class="logo" src="/assets/logo.png" alt="" />
+      <a class="brand" href="../">
+        <img class="logo" src="../assets/logo.png" alt="VIYAF" />
         <div>
           <h1>打开资料包 / Pack</h1>
           <div class="sub">VIYAF — Vienna International Youth Arts Development Foundation</div>
@@ -65,39 +100,41 @@
       </a>
 
       <nav class="nav" aria-label="Primary">
-        <a class="btn" href="/verify/">机构核验 / Verify</a>
-        <a class="btn ghost" href="/">返回首页</a>
+        <a class="btn" href="../verify/">先做机构核验 / Verify</a>
+        <a class="btn primary" href="../">返回首页</a>
       </nav>
     </header>
 
     <section class="hero">
-      <div class="kicker"><span class="dot"></span> Pack request</div>
+      <div class="kicker"><span class="dot"></span> Materials · by request</div>
       <h2>资料包获取（对外沟通专用）</h2>
       <p class="subline">
-        为保证版本一致与合规管理，本页不提供公开直链下载。资料包由 VIYAF 通过邮件发送（当期版）。
+        为避免版本混乱，核心文件以“当期版本口径”为准；资料包通过邮件发送（按需提供）。
       </p>
 
-      <div style="margin-top:14px; display:flex; gap:12px; flex-wrap:wrap;">
-        <a class="btn primary" href="mailto:office@viyaf.org?subject=VIYAF%20Pack%20Request&body=您好，%0A%0A我希望获取VIYAF资料包（当期版）用于内部评估/合作沟通。%0A%0A姓名：%0A机构：%0A用途：%0A电话：%0A%0A谢谢。">一键索取资料包（Email）</a>
-        <a class="btn" href="/verify/">先做机构核验 / Verify</a>
+      <div class="cta">
+        <a class="btn primary"
+           href="mailto:office@viyaf.org?subject=VIYAF%20Pack%20Request&body=您好%EF%BC%8C%0A%0A我希望索取%20VIYAF%20当期资料包%EF%BC%88宣传册PDF/%E6%8A%AB%E9%9C%B2%E6%96%87%E6%A1%A3%EF%BC%89%E3%80%82%0A%0A姓名%EF%BC%9A%0A机构%EF%BC%9A%0A用途%EF%BC%9A%0A希望重点了解%EF%BC%9A%E6%B2%BB%E7%90%86/%E9%A1%B9%E7%9B%AE/%E6%8D%90%E8%B5%A0%E7%AD%89%E7%BA%A7/%E5%90%88%E8%A7%84%0A%0A谢谢%EF%BC%81">
+          一键索取资料包（Email）
+        </a>
+        <a class="btn" href="../verify/">机构核验 / Verify</a>
       </div>
     </section>
 
-    <section class="card" aria-label="Pack includes">
-      <h3>公开版资料包（包含）</h3>
+    <section class="card">
+      <h3>资料包目录（公开口径）</h3>
       <ul>
-        <li>《VIYAF 募资宣传册》PDF（中文版 v01/26）</li>
-        <li>捐赠流程与联系信息（与当期版本口径一致）</li>
-        <li>如需附件/矩阵/证明材料：按需通过邮件提供</li>
+        <li>《VIYAF 募资宣传册》（中文版 v01/26，A5）— 通过邮件发送当期 PDF</li>
+        <li>Donor Benefits Matrix（当期版）— 通过邮件发送（按需提供）</li>
+        <li>Firmenbuch Auszug / 合规说明 — 通过邮件发送（按需提供）</li>
+        <li>品牌素材（Logo/Seal）— 对合作伙伴按需提供（用途与范围可备注）</li>
       </ul>
-      <p style="margin-top:10px; color:#666; font-size:13px;">
-        若需纸质手册（A5 竖版，16–24P）或印刷建议，请在邮件中备注“纸质版需求”。
-      </p>
     </section>
 
     <section class="meta" aria-label="Contact">
-      Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a> · Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a><br />
-      Address: Schweidlgasse 30/2/56, 1020 Wien · FN <code>653499 d</code>
+      Email: <a href="mailto:office@viyaf.org">office@viyaf.org</a> ·
+      Tel: <a href="tel:+4369919210336">+43 699 1921 0336</a><br />
+      Address: Schweidlgasse 30/2/56, 1020 Wien · Firmenbuch: <b>FN 653499 d</b>
     </section>
 
     <footer>
