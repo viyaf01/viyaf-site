@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.viyaf.org/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.viyaf.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.viyaf.org/en/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.viyaf.org/en/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.viyaf.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.viyaf.org/en/"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.viyaf.org/giving/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.viyaf.org/giving/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.viyaf.org/en/giving/"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.viyaf.org/en/giving/</loc>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.viyaf.org/giving/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.viyaf.org/en/giving/"/>
+    <priority>0.8</priority>
+  </url>
+  <url><loc>https://www.viyaf.org/verify/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.viyaf.org/pack/</loc><priority>0.7</priority></url>
+</urlset>
