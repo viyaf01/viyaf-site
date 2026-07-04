@@ -31,7 +31,7 @@
 }
 
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{
   font-family:var(--f-sans);
@@ -443,16 +443,75 @@ h3{font-weight:700;color:var(--charcoal);font-size:19px;line-height:1.4}
 }
 @media (max-width:760px){
   body{font-size:15.5px}
-  .facts th,.facts td,.note{overflow-wrap:anywhere}
-  .hero-inner{padding:88px 0 76px}
+  .wrap{padding:0 20px}
+  .nav{height:60px;gap:12px}
+  .nav-links{top:60px}
+  .brand img{height:30px}
+  .lang-switch a{padding:5px 10px}
+  .note{overflow-wrap:anywhere}
+  .hero-inner{padding:80px 0 68px}
+  .hero h1{font-size:clamp(25px,7vw,30px)}
+  .eyebrow{font-size:11px;letter-spacing:.12em;gap:8px}
+  .eyebrow::before{display:none}
   .section{padding:64px 0}
+  .section.tight{padding:52px 0}
+  .sec-head{margin-bottom:40px}
   .cards-3,.cards-4,.gov-grid,.season,.chan,.tracks,.guarantee,.steps,.pillars{grid-template-columns:1fr}
   .gallery{grid-template-columns:1fr 1fr}
   .hero-caption{display:none}
-  .gtable{font-size:13px}
-  .gtable th,.gtable td{padding:13px 10px}
-  .bank{padding:28px 22px}
+  .trust-item{padding:14px 16px}
+  .ncard{padding:28px 22px}
+  .board .photo{min-height:330px}
+  .board .bio{padding:28px 22px}
   .f-grid{grid-template-columns:1fr;gap:34px}
-  .tier-table{font-size:13px}
-  .tier-table th,.tier-table td{padding:13px 12px}
+
+  /* ---- data tables become stacked cards on phones:
+          no horizontal squeeze, no sideways scrolling ---- */
+
+  /* foundation profile / impressum table */
+  .facts,.facts tbody{display:block}
+  .facts tr{display:block;padding:13px 18px;border-bottom:1px solid var(--line)}
+  .facts tr:last-child{border-bottom:none}
+  .facts th,.facts td{display:block;width:auto;padding:0;border:none;background:none;white-space:normal;overflow-wrap:anywhere}
+  .facts th{font-size:12px;color:var(--gold-2);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:3px}
+
+  /* donation account table */
+  .bank{padding:26px 20px}
+  .bank table,.bank tbody{display:block}
+  .bank tr{display:block;padding:10px 0;border-bottom:1px solid rgba(191,163,90,.2)}
+  .bank tr:last-child{border-bottom:none}
+  .bank th,.bank td{display:block;width:auto;padding:0;border:none;overflow-wrap:anywhere}
+  .bank th{font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+
+  /* tier tables (giving page) */
+  .tier-table,.tier-table tbody{display:block;font-size:14px}
+  .tier-table thead{display:none}
+  .tier-table tr{display:block;padding:16px 18px 15px;border-bottom:1px solid var(--line)}
+  .tier-table tbody tr:last-child{border-bottom:none}
+  .tier-table th,.tier-table td{display:block;width:auto;padding:0;border:none}
+  .tier-table .tname b{font-size:16px}
+  .tier-table .amt{white-space:normal;font-size:15.5px;margin:3px 0 9px}
+  .tier-table td:last-child{font-size:13.5px}
+  .tier-table td[data-th]::before{
+    content:attr(data-th);display:block;font-size:11px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--gold-2);font-weight:700;margin-bottom:3px;
+  }
+  .tier-table .amt[data-th]::before{display:inline;margin:0 8px 0 0}
+
+  /* giving overview table (dark, home page) */
+  .gtable,.gtable tbody{display:block;font-size:13.5px}
+  .gtable thead{display:none}
+  .gtable tr{display:block;padding:17px 0 15px;border-bottom:1px solid rgba(191,163,90,.22)}
+  .gtable tbody tr:last-child{border-bottom:none}
+  .gtable th,.gtable td{display:block;width:auto;padding:0;border:none}
+  .gtable td b{font-size:16px}
+  .gtable td:first-child{margin-bottom:2px}
+  .gtable .amt{white-space:normal;font-size:15px;margin:4px 0 10px}
+  .gtable td[data-th]{margin-bottom:9px}
+  .gtable td[data-th]:last-child{margin-bottom:0}
+  .gtable td[data-th]::before{
+    content:attr(data-th);display:block;font-size:11px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:2px;
+  }
+  .gtable .amt[data-th]::before{display:inline;margin:0 8px 0 0}
 }
